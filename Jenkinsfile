@@ -2,22 +2,27 @@ pipeline {
     agent any
         stages {   
            stage('Checkout') {
+               steps {
                     checkout scm
-                }
-        stage('Build') {
-            steps {
+               }
+             }
+           
+            stage('Build') {
+               steps {
                 echo 'Building..'
-            }
-        }
-        stage('Test') {
-            steps {
+               }
+           }
+        
+            stage('Test') {
+               steps {
                 echo 'Testing..'
-            }
-        }
-        stage('Deploy') {
-            steps {
+              }
+           }
+            
+            stage('Deploy') {
+               steps {
                 echo 'Deploying....'
+               }
             }
-        }
     }
 }
